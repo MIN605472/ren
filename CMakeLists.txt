@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(ren)
+add_subdirectory(lib/libren)
+set(SOURCES src/main.cc)
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME} PRIVATE libren)
+target_compile_options(${PROJECT_NAME} PUBLIC -std=c++14)
