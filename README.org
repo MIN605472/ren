@@ -8,34 +8,38 @@
         ren -h
 
       Options:
-        -spp <integer> 
+        -spp <integer>
             Number of samples per pixel. [default: 8]
 
-        -o <name>     
+        -o <name>
              Path of the output image without the extensions. [default: output]
 
-        -s <cbox_blocks|cbox_spheres|cbox_sphere_inside|cbox_blocks_disk>     
+        -s <cbox_blocks|cbox_spheres|cbox_sphere_inside|cbox_blocks_disk>
              Name of the scene to render. [default: cbox_blocks]
 
-        -r <pt|pm>    
+        -r <pt|pm>
              Method to render the scene. Choose one between <pt> (path tracing)
              and <pm> (photon mapping). [default: pt]
 
-        -cp <integer> 
+        -cp <integer>
              Number of caustic photons to launch for photon mapping. [default: 10000]
 
-        -ip <integer> 
+        -ip <integer>
              Number of indirect photons to launch for photon mapping. [default: 10000000]
 
-        -np <integer> 
+        -np <integer>
              Number of neighbours photons to use during radiance estimation in photon mapping. [default: 100]
 
-        -h            
+        -h
              Show this screen.
 
 #+end_example
 
 * Results
 #+caption: Cornell box. Path tracing. 1024 x 4(AA) spp
-#+nameE: fig:cbox_blocks
+#+name: fig:cbox_blocks
 [[file:results/cbox_blocks.png]]
+
+#+caption: Cornell box with spheres. Path tracing.
+#+name: fig:cbox_spheres
+[[file:results/cbox_spheres.png]]
